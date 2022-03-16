@@ -7,7 +7,7 @@ public class Calculator {
         return a + b;
     }
 
-    public double sqrt_div(int a, int b) {
-        return Math.sqrt(a / b);
+    public int sqrt_div(int a, int b) {
+        return (int)(Math.sqrt(a / b));
     }
 }
