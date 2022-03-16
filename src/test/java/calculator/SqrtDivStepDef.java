@@ -1,3 +1,5 @@
+package calculator;
+
 import calculator.Calculator;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
@@ -9,7 +11,7 @@ public class SqrtDivStepDef {
     private Calculator calculator;
     private int value1;
     private int value2;
-    private int result;
+    private double result;
 
     @Before
     public void before() {
@@ -28,8 +30,8 @@ public class SqrtDivStepDef {
         System.out.print(result);
     }
 
-    @Then("^I expect the answer (\\d+)$")
-    public void iExpectTheAnswer(int arg0) {
-        Assert.assertEquals(arg0, result);
+    @Then("^I expect the answer (\\d+\\.\\d+)$")
+    public void iExpectTheAnswer(double arg0) {
+        Assert.assertEquals(arg0, result, 0.005);
     }
 }
