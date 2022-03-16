@@ -2,14 +2,14 @@
 Feature: Calculator
 
 Scenario: sqrt_div two numbers
-  Given Two input values, 8 and 2
+  Given Two integers 8 and 2
   When I divide and sqrt the two values
-  Then I expect the result 2
+  Then I expect the answer 2
 
 Scenario Outline: sqrt_div two numbers
-  Given Two input values, <first> and <second>
+  Given Two integers <first> and <second>
   When I divide and sqrt the two values
-  Then I expect the result <result>
+  Then I expect the answer <result>
 
 Examples:
   | first | second | result |
