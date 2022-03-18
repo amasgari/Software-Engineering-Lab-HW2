@@ -27,10 +27,10 @@ public class SqrtDivStepDef {
     @When("^I divide and sqrt the two values$")
     public void iDivideAndSqrtTheTwoValues() {
         result = calculator.sqrt_div(value1, value2);
-        System.out.print(result);
+        System.out.println(result);
     }
 
-    @Then("^I expect the answer (\\d+\\.\\d+)$")
+    @Then("^I expect the answer (\\-?\\d+\\.\\d+)$")
     public void iExpectTheAnswer(double arg0) {
         Assert.assertEquals(arg0, result, 0.005);
     }
