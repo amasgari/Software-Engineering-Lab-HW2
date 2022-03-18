@@ -8,6 +8,14 @@ public class Calculator {
     }
 
     public double sqrt_div(int a, int b) {
-        return Math.sqrt((double)(a) / (double)(b));
+        Double temp;
+        try {
+            temp = Math.sqrt((double)(a) / (double)(b));
+        } catch (Exception e) {
+            temp = -1.0;
+        }
+        if (temp.isNaN() || temp.isInfinite())
+            temp = -1.0;
+        return temp;
     }
 }
